@@ -43,12 +43,14 @@ public class Lists {
     }
 
     public static Integer remove(String color, List<String> colores){
+        int v=0;
         for (int i = 0; i < colores.size(); i++) {
             if (Objects.equals(color, colores.get(i))) {
-                colores.add(i,"");
+                colores.remove(i);
+                v+=1;
             }
         }
-        return -1;
+        return v;
     }
 }
 
